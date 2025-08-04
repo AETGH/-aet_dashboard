@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  dashboard:
+    build: .
+    container_name: aet_dashboard
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./config:/app/config
+    restart: unless-stopped
