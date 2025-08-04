@@ -1,4 +1,4 @@
-# aet-dashboard ~> Ein Dashboard, sie alle zu knechten 👑
+# aet_dashboard ~> Ein Dashboard, sie alle zu knechten 👑
 -@_das H board
 
 Ein zentrales Maschinen-Dashboard für alle deine Systeme.  
@@ -34,8 +34,8 @@ Mandantenfähig. Docker-ready. Leichtgewichtig. Flexibel.
 ## Quickstart
 
 ```bash
-git clone https://github.com/AETGH/aet-dashboard.git
-cd aet-dashboard
+git clone https://github.com/AETGH/aet_dashboard.git
+cd aet_dashboard
 docker compose up -d
 ```
 
@@ -43,7 +43,7 @@ docker compose up -d
 
 ## 🇬🇧 **README (English)**
 
-# aet-dashboard – One Dashboard to Rule Them All 👑
+# aet_dashboard – One Dashboard to Rule Them All 👑
 
 A central dashboard for managing all your machines.  
 Clients (e.g. Raspberry Pis, servers, VMs) send their status via REST API.  
@@ -78,6 +78,6 @@ Multi-client ready. Docker-based. Lightweight. Flexible.
 ## Quickstart
 
 ```bash
-git clone https://github.com/AETGH/aet-dashboard.git
-cd aet-dashboard
+git clone https://github.com/AETGH/aet_dashboard.git
+cd aet_dashboard
 docker compose up -d
