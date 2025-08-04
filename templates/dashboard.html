@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>aet-dashboard</title>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #eee; padding: 2em; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #444; padding: 8px; text-align: left; }
+    th { background-color: #222; }
+    tr:hover { background-color: #333; }
+  </style>
+</head>
+<body>
+  <h1>-@_Dashboard</h1>
+  <table>
+    <tr>
+      <th>Client ID</th>
+      <th>Hostname</th>
+      <th>IP</th>
+      <th>Uptime</th>
+      <th>Modules</th>
+      <th>Last Seen</th>
+    </tr>
+    {% for c in clients %}
+    <tr>
+      <td>{{ c.client_id }}</td>
+      <td>{{ c.hostname }}</td>
+      <td>{{ c.ip }}</td>
+      <td>{{ c.uptime }}</td>
+      <td><pre>{{ c.modules }}</pre></td>
+      <td>{{ c.last_seen }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
