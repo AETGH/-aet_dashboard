@@ -37,13 +37,12 @@ Mandantenfähig. Docker-ready. Leichtgewichtig. Flexibel.
 git clone https://github.com/deinuser/aet-dashboard.git
 cd aet-dashboard
 docker compose up -d
-
+```
 
 ---
 
 ## 🇬🇧 **README (English)**
 
-```markdown
 # aet-dashboard – One Dashboard to Rule Them All 👑
 
 A central dashboard for managing all your machines.  
