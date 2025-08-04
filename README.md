@@ -34,7 +34,7 @@ Mandantenfähig. Docker-ready. Leichtgewichtig. Flexibel.
 ## Quickstart
 
 ```bash
-git clone https://github.com/deinuser/aet-dashboard.git
+git clone https://github.com/AETGH/aet-dashboard.git
 cd aet-dashboard
 docker compose up -d
 ```
@@ -78,6 +78,6 @@ Multi-client ready. Docker-based. Lightweight. Flexible.
 ## Quickstart
 
 ```bash
-git clone https://github.com/youruser/aet-dashboard.git
+git clone https://github.com/AETGH/aet-dashboard.git
 cd aet-dashboard
 docker compose up -d
