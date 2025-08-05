@@ -7,7 +7,10 @@ api_blueprint = Blueprint("api", __name__, url_prefix="/api")
 
 @api_blueprint.route("/status", methods=["POST"])
 def status():
-    data = request.get_json()
+    if request.is_json:
+        data = request.get_json()
+    else:
+        data = request.form.to_dict()
     data["last_seen"] = datetime.datetime.utcnow().isoformat()
     upsert_client(data)
     return jsonify({"message": "Status gespeichert"})
