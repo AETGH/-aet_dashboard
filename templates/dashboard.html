@@ -24,7 +24,7 @@
       <th>Uptime</th>
       <th>Modules</th>
       <th>Last Seen</th>
-      <th>Aktionen</th>
+      <th>Aktionen</th> <!-- NEU -->
     </tr>
     {% for c in clients %}
     <tr>
@@ -35,10 +35,10 @@
       <td><pre>{{ c.modules }}</pre></td>
       <td>{{ c.last_seen }}</td>
       <td>
-        <form method="post" action="/api/command" class="form-inline">
+        <form method="post" action="/api/command" style="display: flex; gap: 5px;">
           <input type="hidden" name="client_id" value="{{ c.client_id }}">
           <input type="hidden" name="cmd" value="install_kits">
-          <input type="text" name="args" value="https://github.com/deinuser/kITs.git">
+          <input type="text" name="args" placeholder="Git Repo URL" value="https://github.com/deinuser/kITs.git" size="35">
           <button type="submit">🚀 Installiere kITs</button>
         </form>
       </td>
