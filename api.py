@@ -20,9 +20,17 @@ def commands():
 
 @api_blueprint.route("/command", methods=["POST"])
 def command():
-    data = request.get_json()
+    if request.is_json:
+        data = request.get_json()
+    else:
+        data = request.form.to_dict()
+
     client_id = data.get("client_id")
     cmd = data.get("cmd")
     args = data.get("args", None)
+
+    if not client_id or not cmd:
+        return jsonify({"error": "client_id und cmd sind erforderlich"}), 400
+
     add_command(client_id, cmd, args)
-    return jsonify({"message": "Command added"})
+    return jsonify({"message": f"Command '{cmd}' für {client_id} gesetzt."})
