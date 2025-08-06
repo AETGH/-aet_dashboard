@@ -48,13 +48,18 @@
       <td><pre>{{ c.modules }}</pre></td>
       <td>{{ c.last_seen }}</td>
       <td>
-        <form method="post" action="/api/command">
+        <form method="post" 
+              action="/api/command" 
+              hx-post="/api/command" 
+              hx-target="#feedback-{{ c.client_id }}" 
+              hx-swap="outerHTML">
           <input type="hidden" name="client_id" value="{{ c.client_id }}">
           <input type="hidden" name="cmd" value="install_kits">
           <input type="text" name="args" value="https://github.com/deinuser/kITs.git" size="35">
           <button type="submit">🚀 Installiere kITs</button>
         </form>
       </td>
+      <div id="feedback-{{ c.client_id }}"></div>
     </tr>
     {% endfor %}
   </table>
