@@ -35,5 +35,11 @@ def command():
     if not client_id or not cmd:
         return jsonify({"error": "client_id und cmd sind erforderlich"}), 400
 
+        # HTMX: Live-Feedback
+    if request.headers.get("HX-Request"):
+        return f'<div id="feedback-{client_id}">✅ Befehl gesendet: <code>{cmd}</code></div>'
+
+    return jsonify({"message": f"Command '{cmd}' für {client_id} gesetzt."})
+    
     add_command(client_id, cmd, args)
     return jsonify({"message": f"Command '{cmd}' für {client_id} gesetzt."})
